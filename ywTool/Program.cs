@@ -20,6 +20,7 @@ namespace ywTool
             {
                 Common.CommFuns.WriteLog("Starting...");
                 GlobalSettings.CmdQueue.Enqueue("command runbatch -i " + args[0]);
+                System.Threading.Thread.Sleep(3000);
                 while (GlobalSettings.CmdQueue.Count > 0)
                 {
                     Common.CommFuns.WriteLog("Waiting for ----" + GlobalSettings.CmdQueue.Peek());
